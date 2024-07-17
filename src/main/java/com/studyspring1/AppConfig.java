@@ -15,7 +15,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class AppConfig {
 
-    @Bean  //spring 컨테이너 등록
+    @Bean  //spring 컨테이너 등록 //항상 다른이름으로 생성  //임의로 부여할수있음
     public MemberService memberService() {
         return new MemberServiceImpl(memberRepository());
     }
@@ -34,6 +34,5 @@ public class AppConfig {
     public DiscountPolicy discountPolicy() {
         return new RateDiscountPolicy();
     }
-
 
 }
